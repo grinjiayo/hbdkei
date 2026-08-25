@@ -1088,7 +1088,7 @@ nav {
 
 /* MOBILE */
 
-@media (max-width: 600px) {
+@media (max-width: 360px) {
 
     .wish-popup-content {
         padding: 25px 20px;
@@ -1436,7 +1436,7 @@ nav {
     background: #60a5fa;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 360px) {
 
     .games-overlay {
         padding: 10px;
@@ -1930,7 +1930,7 @@ nav {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 360px) {
 
     .cake-image {
         width: 95vw;
@@ -1981,7 +1981,7 @@ nav {
    MOBILE GAMES
 ========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 360px) {
 
     .games-menu {
         padding: 35px 20px;
@@ -2336,7 +2336,7 @@ footer {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 360px) {
 
     nav {
         height: 65px;
