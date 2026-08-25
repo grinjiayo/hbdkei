@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>hbdkeikei💙</title>
+    <link rel="icon" type="image/png" href="kei.jpg">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background Decorations -->
+    <div class="stars"></div>
+
+    <div class="balloon balloon1"></div>
+    <div class="balloon balloon2"></div>
+    <div class="balloon balloon3"></div>
+    <div class="balloon balloon4"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            Happy Birthday Kei <span>💙</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#message">Message</a>
+            <a href="#wish">Wish</a>
+
+            <button class="games-nav-button" onclick="openGames()">
+                🎮 Games
+            </button>
+            <button id="musicButton" onclick="toggleMusic()">
+                🎵
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <main id="home">
+
+        <section class="hero">
+
+            <div class="intro">
+                <p class="small-title">A special day for someone special</p>
+
+                <h1>
+                    Happy<br>
+                    Birthday!
+                </h1>
+
+                <p class="subtitle">
+                    Wishing you a day filled with happiness,
+                    laughter, and beautiful memories. 💙
+                </p>
+
+                <button class="wish-button" onclick="makeWish()">
+                    ✨ Make a Wish
+                </button>
+
+            </div>
+
+            
+            <!-- CAKE -->
+            <img src="haha.gif" alt="Birthday Cake" class="cake-image" style="margin-top: 20px;">
+           
+
+        </section>
+
+
+        <!-- Message -->
+        <section id="message" class="message-section">
+
+            <p class="section-label">A little message</p>
+
+            <h2>
+                Today is all about <span>you.</span>
+            </h2>
+
+            <p>
+                May this new chapter of your life bring you
+                countless reasons to smile, wonderful memories,
+                and dreams that come true.
+            </p>
+
+            <div class="heart">
+                💙
+            </div>
+
+        </section>
+
+
+        <!-- Wish -->
+        <section id="wish" class="wish-section">
+
+            <div class="wish-card">
+
+                <div class="sparkle">✦</div>
+
+                <h2>Make a Wish</h2>
+
+                <p>
+                    Close your eyes, make your wish,
+                    and blow out the candles. ✨
+                </p>
+
+                <button onclick="blowCandles()">
+                    🕯️ Blow the Candles
+                </button>
+
+            </div>
+
+        </section>
+        
+
+    </main>
+
+
+    <!-- Music -->
+    <audio id="birthdayMusic" loop preload="auto">
+      <source src="hbd.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="wishPopup" class="wish-popup">
+
+    <div class="wish-popup-content">
+
+        <button class="popup-close" onclick="closeWishPopup()">
+            ×
+        </button>
+
+        <div class="popup-photo">
+            <img src="kei.jpg" alt="Birthday Girl">
+        </div>
+
+        <div class="birthday-letter">
+
+            <h2>
+                Happy Birthday, Kei!
+            </h2>
+
+            <p>
+                Happy Birthday Bornday Birtdiiiiiii Keikei! 🎂✨
+            </p>
+
+            <p>
+                I hope today reminds you of how special and
+                appreciated you are. May this new chapter of your
+                life bring you happiness, beautiful memories,
+                and countless reasons to smile.
+            </p>
+
+            <p>
+                Whatever dreams you have, I hope you continue
+                chasing them and believing in yourself. You
+                deserve all the wonderful things that life has
+                to offer.
+            </p>
+
+            <p>
+                Enjoy your special day and make lots of memories.
+                Always remember that you are someone worth
+                celebrating. 💙
+            </p>
+
+            <p class="letter-ending">
+                - Juju (Baobao)<br>
+                <span>Someone who wishes you the best 💙</span>
+            </p>
+
+        </div>
+
+        <button class="wish-popup-close" onclick="closeWishPopup()">
+            Smile before u click ^-^
+        </button>
+
+    </div>
+
+    
+
+</div>
+
+<!-- =========================
+     GAMES MENU
+========================= -->
+
+<div id="gamesOverlay" class="games-overlay">
+
+    <div class="games-menu">
+
+        <button class="games-close" onclick="closeGames()">×</button>
+
+        <div class="games-header">
+            <span>🎮</span>
+            <h2>Birthday Games</h2>
+            <p>
+                Complete each little challenge to unlock the next one. 💙
+            </p>
+        </div>
+
+        <div class="games-grid">
+
+            <!-- GAME 1 -->
+            <button id="gameCard1"
+                    class="game-card"
+                    onclick="startHeartsGame()">
+
+                <div class="game-icon">💙</div>
+
+                <h3>Collect the Hearts</h3>
+
+                <p>
+                    Catch all 5 hearts!
+                </p>
+
+                <span id="gameStatus1">
+                    ▶ Play
+                </span>
+
+            </button>
+
+
+            <!-- GAME 2 -->
+            <button id="gameCard2"
+                    class="game-card locked"
+                    onclick="startHiddenGame()">
+
+                <div class="game-icon">🔐</div>
+
+                <h3>Unlock the Message</h3>
+
+                <p>
+                    Find the hidden letters!
+                </p>
+
+                <span id="gameStatus2">
+                    🔒 Locked
+                </span>
+
+            </button>
+
+
+            <!-- GAME 3 -->
+            <button id="gameCard3"
+                    class="game-card locked"
+                    onclick="startBalloonGame()">
+
+                <div class="game-icon">🎈</div>
+
+                <h3>Pop the Balloons</h3>
+
+                <p>
+                    Pop all 10 balloons!
+                </p>
+
+                <span id="gameStatus3">
+                    🔒 Locked
+                </span>
+
+            </button>
+
+
+            <!-- GAME 4 -->
+            <button id="gameCard4"
+                    class="game-card locked"
+                    onclick="startMemoryGame()">
+
+                <div class="game-icon">🧩</div>
+
+                <h3>Birthday Memory</h3>
+
+                <p>
+                    Match all the birthday cards!
+                </p>
+
+                <span id="gameStatus4">
+                    🔒 Locked
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     GAME SCREEN
+========================= -->
+
+<div id="gameOverlay" class="game-overlay">
+
+    <div class="game-window">
+
+        <button class="game-close" onclick="closeGame()">×</button>
+
+        <div id="gameContent"></div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     GAME REWARD
+========================= -->
+
+<div id="gameReward" class="game-reward-overlay">
+
+    <div class="game-reward">
+
+        <div class="reward-icon">🎁</div>
+
+        <h2 id="rewardTitle">
+            You Did It! 💙
+        </h2>
+
+        <p id="rewardText"></p>
+
+        <button onclick="closeReward()">
+            ✨ Continue
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     SPECIAL POEM
+========================= -->
+
+<div id="poemOverlay" class="poem-overlay">
+
+    <div class="poem-card">
+
+        <button class="poem-close" onclick="closePoem()">
+            ×
+        </button>
+
+        <div class="poem-icon">
+            🌙💙
+        </div>
+
+        <p class="poem-label">
+            A SPECIAL BIRTHDAY POEM
+        </p>
+
+        <h2>
+            For Kei
+        </h2>
+
+        <div class="poem">
+
+            <p>
+                On this special day of yours,<br>
+                may happiness find every door.
+            </p>
+
+            <p>
+                May every dream you hold so dear<br>
+                grow brighter with each passing year.
+            </p>
+
+            <p>
+                May laughter stay beside your way,<br>
+                and warm your heart each single day.
+            </p>
+
+            <p>
+                And when the skies are sometimes blue,<br>
+                remember there are people cheering for you.
+            </p>
+
+            <p>
+                So here's a wish, simple and true:<br>
+                may life be kind and beautiful to you.
+            </p>
+
+            <p class="poem-ending">
+                Happy Birthday, Kei. 💙<br>
+                <span>— Juju (Baobao)</span>
+            </p>
+
+        </div>
+
+        <button class="poem-button" onclick="closePoem()">
+            💙 Keep Smiling
+        </button>
+
+    </div>
+
+</div>
+
+
+
+    <footer>
+        I will always here for you till the last byte fades from memory. 💙 
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
